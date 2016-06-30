@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #0d7ca3;
+    font-family: Tahoma, serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    background: url("img/back-top.png") repeat-x;
+}
+
+.page {
+    margin: 0 auto;
+    width: 1000px;
+    background: white;
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,0.9);
+    position: relative;
+}
+
+a.logo {
+    display: inline-block;
+    padding: 11px 27px 0;
+}
+
+.hedader-right {
+    display: inline-block;
+    float: right;
+    padding: 0 30px;
+}
+
+.contacts {
+    color: #128aa7;
+    font-size: 12px;
+    margin-top: 7px;
+    float: right;
+}
+
+.contacts .label {
+    font-weight: bold;
+}
+
+.contacts span {
+    display: block;
+    padding: 2px 0;
+}
+
+ul.menu-image {
+    list-style: none;
+    clear: both;
+    padding-top: 30px;
+}
+
+ul.menu-image li {
+    display: inline-block;
+    width: 54px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    text-align: center;
+    opacity: 0.8;
+}
+
+ul.menu-image li:hover {
+    opacity: 1;
+}
+
+ul.menu-image li a {
+    font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #128aa7;
+
+}
+
+.i {
+    background-image: url("img/i_flag.jpg");
+}
+
+.n {
+    background-image: url("img/n_flag.jpg");
+}
+
+.t {
+    background-image: url("img/t_flag.jpg");
+}
+
+.b {
+    background-image: url("img/b_flag.jpg");
+}
+
+.s {
+    background-image: url("img/s_flag.jpg");
+}
+
+.m {
+    background-image: url("img/m_flag.jpg");
+}
+
+.header-photo {
+    height: 237px;
+    margin-top: -3px;
+    border-bottom: 1px solid #138aa7;
+    background: url("img/back-photo.jpg");
+}
+
+ul.menu-top {
+    background: linear-gradient(to bottom, rgba(54,54,54,1) 0%, rgba(48,48,48,1) 100%);
+    border-bottom: 1px solid black;
+    box-shadow: 0 3px 3px 0px rgba(0,0,0,0.7);
+    position: relative;
+    z-index: 2;
+}
+
+ul.menu-top li {
+    display: inline-block;
+}
+
+ul.menu-top li a {
+    display: inline-block;
+    padding: 5px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul.menu-top li.sub>a:after {
+    content: "  \25BE";
+    font-size: 18px;
+    line-height: 1px;
+}
+
+footer {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+
+.columns {
+    overflow: hidden;
+}
+
+.column-left, .column-right {
+    color: #424c43;
+}
+
+.column-left .label, .column-right .label {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 0 5px;
+}
+
+
+.columnt-back-left {  /* фон для левой колонки (синий) */
+    width: 100%;
+    background: #edeef0;
+    float: left; /* делаем все обертки плавающими блоками чтобы избежать добавления блока с clear: both; */
+    position: relative; /* чтобы иметь возможность сместить фон */
+    right: 58%; /* обнажаем красный фон для центральной колонки. 30% - ширина центральной колонки */
+    border-right: 1px solid #c7cacf;
+}
+.column-back-center {/* фон для центральной колонки (красный) */
+    width: 100%;
+    background: white;
+    float: left;
+    position: relative;
+    right: 21%; /* обнажаем желтый фон для правой колонки. 40% - ширина правой колонки */
+    border-right: 1px solid #c7cacf;
+}
+.column-back-right {/* фон для правой колонки (желтый) */
+    width: 100%;
+    background: #edeef0;
+    float: left;
+}
+.column-left {
+    width: 19%;
+    padding: 1%;
+    float: left;
+    overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+    position:relative;
+    left:79%; /* возвращаем колонки с контентом на свои позиции. 70% - сумма смещений оберток fon1 и fon2 */
+}
+.column-center {
+    width: 58%;
+    float: left;
+    overflow: hidden;
+    position:relative;
+    left:79%;
+}
+.column-right {
+    width: 19%;
+    padding: 1%;
+    float: left;
+    overflow: hidden;
+    position:relative;
+    left:79%;
+}
+
+main {
+
+    padding: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.page {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}
+
+pre {
+    font-family: tahoma;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+ul.menu-top > li {
+    position: relative;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 27px;
+    left: 30px;
+    background-color: white;
+    border-top: 1px solid;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 5px;
+    color: white;
+    background-color: #303030;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    color: lightgray;
+}
+
+ul.menu-top > li:hover > ul.submenu {
+    display: block;
+}
+
