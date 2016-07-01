@@ -3,14 +3,9 @@
     padding: 0;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     background: #0d7ca3;
-    font-family: Tahoma, serif;
+    font-family: Tahoma, sans-serif;
 }
 
 .wrapper {
@@ -53,6 +48,8 @@ a.logo {
     padding: 2px 0;
 }
 
+/*IMAGE-MENU*/
+
 ul.menu-image {
     list-style: none;
     clear: both;
@@ -82,7 +79,6 @@ ul.menu-image li a {
     left: 0;
     right: 0;
     color: #128aa7;
-
 }
 
 .i {
@@ -109,12 +105,15 @@ ul.menu-image li a {
     background-image: url("img/m_flag.jpg");
 }
 
+
 .header-photo {
     height: 237px;
     margin-top: -3px;
     border-bottom: 1px solid #138aa7;
     background: url("img/back-photo.jpg");
 }
+
+/*TOP MENU*/
 
 ul.menu-top {
     background: linear-gradient(to bottom, rgba(54,54,54,1) 0%, rgba(48,48,48,1) 100%);
@@ -124,13 +123,15 @@ ul.menu-top {
     z-index: 2;
 }
 
-ul.menu-top li {
+ul.menu-top>li {
     display: inline-block;
+    position: relative;
 }
 
 ul.menu-top li a {
     display: inline-block;
-    padding: 5px 30px;
+    padding: 0 30px;
+    line-height: 30px;
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -142,15 +143,38 @@ ul.menu-top li.sub>a:after {
     line-height: 1px;
 }
 
-footer {
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    color: white;
-    font-size: 14px;
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 30px;
+    left: 30px;
+    background-color: white;
+    border-top: 1px solid;
 }
 
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 0 5px;
+    line-height: 24px;
+    color: white;
+    background-color: #303030;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    color: lightgray;
+}
+
+ul.menu-top > li:hover > ul.submenu {
+    display: block;
+}
+
+/*MAIN CONTENT*/
 
 .columns {
     overflow: hidden;
@@ -217,6 +241,24 @@ main {
     padding: 10px;
 }
 
+
+pre {
+    font-family: Tahoma, sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+footer {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+/*FOOTER TO BOTTOM*/
+
 html,
 body {
     height: 100%;
@@ -232,44 +274,3 @@ body {
 footer {
     flex: 0 0 auto;
 }
-
-pre {
-    font-family: tahoma;
-    line-height: 24px;
-    font-size: 14px;
-}
-
-ul.menu-top > li {
-    position: relative;
-}
-
-ul.submenu {
-    display: none;
-    position: absolute;
-    width: 120px;
-    top: 27px;
-    left: 30px;
-    background-color: white;
-    border-top: 1px solid;
-}
-
-ul.submenu > li {
-    display: block;
-}
-
-ul.submenu > li > a {
-    display: block;
-    padding: 5px;
-    color: white;
-    background-color: #303030;
-    text-decoration: none;
-}
-
-ul.submenu > li > a:hover {
-    color: lightgray;
-}
-
-ul.menu-top > li:hover > ul.submenu {
-    display: block;
-}
-
